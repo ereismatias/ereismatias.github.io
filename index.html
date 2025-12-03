@@ -1,127 +1,246 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Sou Consultor SAP ABAP, mas também faço desenvolvimento de aplicações atuando com FullStack Developer, entre em contato para um orçamento.">
-  <meta name="keywords" content="sap,abap,fiori,mm,sd,fi,co,fullstack,reactjs,reactnativa,nodejs,javascript,typescript,vscode,express,vuejs">
-  <meta name="author" content="Evandro Reis Matias ">
-  <title>Evandro Reis Matias - Developer</title>
-  <link rel="stylesheet" href="./css/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-  <script src="https://kit.fontawesome.com/6fc087a7d5.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evandro Matias - Especialista de Sistemas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sou Especislista de Sistemas SAP ABAP, mas também faço desenvolvimento de aplicações atuando com FullStack Developer.">
+    <meta name="keywords" content="sap,abap,fiori,mm,sd,fi,co,fullstack,reactjs,reactnativa,nodejs,javascript,typescript,vscode,express,vuejs">
+    <meta name="author" content="Evandro Reis Matias ">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* bg-gray-900 */
+            color: #d1d5db; /* text-gray-300 */
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 255, 255, 0.1);
+        }
+        .project-card:hover img {
+            transform: scale(1.05);
+        }
+        .animated-gradient {
+            background: linear-gradient(-45deg, #4f46e5, #ec4899, #22d3ee, #f59e0b);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
 </head>
+<body class="antialiased">
 
-<body>
-  <main>
     <!-- Header -->
-    <header id="top">
-      <nav class="menu">
-        <ul>
-          <li><a href="#top">Home</a></li>
-          <li><a href="#about">Sobre</a></li>
-          <li><a href="#knowledge">Conhecimento</a></li>
-          <li><a href="#contact">Contato</a></li>
-        </ul>
-      </nav>
-      <div>
-        <h1 class="title">[ EVANDRO R. MATIAS ]</h1>
-        <h2 class="subtitle">{ SAP Developer / Programer }</h2>
-      </div>
-      <a href="#about" class="arrow-down">
-        <i class="fa fa-angle-double-down icone"></i>
-      </a>
+    <header class="fixed w-full z-10 glass-effect">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white">Home</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#sobre" class="text-gray-300 hover:text-cyan-400 transition-colors">Sobre</a>
+                <a href="#skills" class="text-gray-300 hover:text-cyan-400 transition-colors">Habilidades</a>
+                <a href="#contato" class="text-gray-300 hover:text-cyan-400 transition-colors">Contato</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#sobre" class="block py-2 text-gray-300 hover:text-cyan-400">Sobre</a>
+            <a href="#skills" class="block py-2 text-gray-300 hover:text-cyan-400">Habilidades</a>
+            <a href="#contato" class="block py-2 text-gray-300 hover:text-cyan-400">Contato</a>
+        </div>
     </header>
 
-    <!-- About -->
-    <section id="about" class="about">
-      <div class="about-content">
-        <h2 class="title">SOBRE MIM</h2>
-        <p>
-          Sou o Evandro, atualmente moro em Salvador/BA, trabalho com SAP desde 2011 atuando como programador ABAP,
-		  ou Consultor SAP ABAP (como preferir), já atuei em frentes de MM, SD, FI, CO-PA, PP, PS e quase todas as outras
-		  letrinhas do SAP, também fiz o curso FIORI na Ovly recentemente e já atuei em projeto FIORI, mas como Backend programando
-		  as classes e configurando o Gateway.
-		  Atualmente estou focando meus estudos para linguagens WEB e desenvolvendo projetos pessoais utilizando NodeJS, Express,
-		  MongoDB, ReactJS, React Native e TypeScript.
-		  Sou formado em Sistemas da Informação e carrego a bagagem de Publicidade & Propaganda (minha primeira faculdade).
-		  Nas minhas horas vagas eu passo meu tempo com a minha esposa e filhos, mas ainda assim tento jogar video-game e assistir
-		  filmes e séries.
-        </p>
+    <main>
+        <!-- Seção Hero -->
+        <section id="hero" class="min-h-screen flex items-center pt-20 md:pt-0">
+            <div class="container mx-auto px-6 text-center">
+                <div class="max-w-4xl mx-auto">
+                    <div class="relative inline-block mb-8">
+                         <img src="foto.jpg" alt="Evandro" class="rounded-full w-40 h-40 object-cover border-4 border-cyan-400 shadow-lg">
+                         <span class="absolute bottom-2 right-2 block h-6 w-6 rounded-full bg-green-500 border-2 border-gray-900"></span>
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight">
+                        Oi, eu sou o Evandro!
+                    </h1>
+                    <h2 class="text-3xl md:text-5xl font-bold leading-tight mt-2 mb-4">
+                        <span class="animated-gradient bg-clip-text text-transparent">keep it simple! let´s code!</span>
+                    </h2>
+                    <p class="text-lg md:text-xl text-gray-400 mb-8">
+                        Especialista de Sistemas SAP, focado em construir e integrar soluções empresariais eficientes, desde o back-end com ABAP até interfaces modernas com Fiori.
+                    </p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#contato" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105">
+                            Entre em Contato
+                        </a>
+                        <a href="https://github.com/ereismatias" target="_blank" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105">
+                            <i class="fab fa-github mr-2"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <p>
-          Já trabalhei em muitos lugares, tanto que vim parar aqui em Salvador, mas já trabalhei em algumas empresas como Accenture (Alphaville), 
-		  Sonda (SP), Embraer (SJC), Raízen/Cosan/Shell (Piracicaba) e outras mais, você pode ver mais detalhes acessando meu 
-		  <a href="https://www.linkedin.com/in/ereismatias/" target="_blank" title="LinkedIn">LinkedIn</a>.
-        </p>
-      </div>
-    </section>
+        <!-- Seção Sobre -->
+        <section id="sobre" class="py-20 bg-gray-800/50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Sobre Mim</h2>
+                    <div class="w-24 h-1 animated-gradient mx-auto mt-2 rounded"></div>
+                </div>
+                <div class="max-w-4xl mx-auto text-gray-300 text-lg leading-relaxed space-y-12">
+                    
+                    <p class="text-center">Com mais de uma década de experiência no ecossistema SAP, atuo como Programador ABAP e Líder Técnico, com foco em transformar e otimizar ambientes corporativos.</p>
 
-    <!-- Knowledge -->
-    <section id="knowledge" class="knowledge">
-      <div class="knowledge-content">
-        <h2 class="title">CONHECIMENTO</h2>
-        <p>Sempre antenado no mercado para adquirir uma nova bagagem e incorporando as mais
-		   diversas tecnologias e métodos de acordo com os requisitos e necessidades de cada iniciativa ou projeto.</p>
-        <ul class="grid">
-          <li class="r1">ABAP</li>
-          <li class="r1">Fiori</li>
-          <li class="r1">Gateway</li>
-          <li class="r1">SAP MM</li>
-          <li class="r1">SAP FI</li>
-          <li class="r1">SAP SD</li>
-          <li class="r1">CSS 3</li>
-          <li class="r1">HTML 5</li>
-          <li class="r1">JavaScript</li>
-          <li class="r1">TypeScript</li>
-          <li class="r1">NodeJS</li>
-          <li class="r1">Express</li>
-          <li class="r1">React</li>
-          <li class="r1">React Native</li>
-          <li class="r1">C#</li>
-          <li class="r2">TypeScript</li>
-          <li class="r2">Angular</li>
-          <li class="r1">Git</li>
-          <li class="r2">Usabilidade</li>
-          <li class="r2">Experiência do Usuário</li>
-          <li class="r2">Acessibilidade</li>
-          <li class="r1">Responsividade</li>
-        </ul>
-      </div>
-    </section>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white text-center mb-6"><i class="fas fa-cogs mr-3"></i>Especialidades</h3>
+                        <ul class="space-y-4">
+                            <li class="glass-effect p-4 rounded-lg flex items-center border-l-4 border-cyan-400"><i class="fas fa-project-diagram w-8 text-center text-xl text-cyan-400 mr-4"></i>Liderança técnica em projetos de implantação e upgrade para o SAP S/4HANA.</li>
+                            <li class="glass-effect p-4 rounded-lg flex items-center border-l-4 border-cyan-400"><i class="fas fa-exchange-alt w-8 text-center text-xl text-cyan-400 mr-4"></i>Desenvolvimento de integrações complexas entre sistemas.</li>
+                            <li class="glass-effect p-4 rounded-lg flex items-center border-l-4 border-cyan-400"><i class="fas fa-tachometer-alt w-8 text-center text-xl text-cyan-400 mr-4"></i>Otimização de performance e sustentação de ambientes S/4HANA.</li>
+                        </ul>
+                    </div>
 
-    <!-- Contact -->
-    <section id="contact" class="contact">
-      <h2 class="title">Entre em contato:</h2>
-      <div class="grid icons">
-        <a target="_blank" href="https://github.com/ereismatias">
-          <i class="fab fa-github"></i>
-        </a>
-        <a target="_blank" href="https://www.linkedin.com/in/ereismatias/">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a target="_blank" href="https://twitter.com/ereismatias">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="mailto:evandro@evandro.dev">
-          <i class="fas fa-at"></i>
-        </a>
-      </div>
-    </section>
-	<a href="#top" id="scrollToTop">
-      <i class="fas fa-chevron-up"></i>
-    </a>
-  </main>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white text-center mb-6"><i class="fas fa-lightbulb mr-3"></i>Inovação e Conhecimento</h3>
+                        <p class="text-center">
+                            Entusiasta de tecnologias emergentes como <span class="font-bold text-cyan-300">Blockchain</span> e <span class="font-bold text-cyan-300">IA</span>, busco sempre conectar o futuro ao presente. Tive a honra de compartilhar meu conhecimento como palestrante em eventos de renome, como a <a href="https://campuse.ro/events/Campus-Party-Bahia-2018/workshop/tokenizacao-de-ativos-na-plataforma-waves-cpba2" target="_blank" 
+	  title="Campus Party Salvador">Campus Party</a>, a <a href="https://guiadobitcoin.com.br/noticias/camara-de-comercio-da-franca-no-brasil-organiza-evento-de-blockchain/" target="_blank" 
+	  title="Câmara Comércio Brasil-França">Câmara Comércio Brasil-França</a>, na <a href="https://livecoins.com.br/conamov-congresso-nacional-de-moedas-virtuais-online-e-gratuito/" target="_blank" 
+	  title="Conamov">Conamov</a> e o  <a href="https://steemit.com/blockchain/@blockchainbrasil/blockchain-brasil-colaborando-com-o-nucleo-de-inovacao-da-globo" target="_blank"
+	  title="Núcleo de Inovação da Globo">Núcleo de Inovação da Globo</a>. Também sou um contribuidor ativo na comunidade através de participações no podcast "BitCast - Transformando tudo em Blocos", nos episódios: <a href="https://open.spotify.com/episode/1WG1TpX2lghKKCRge5irUe" target="_blank" 
+	  title="BitCast">Carteira de Bitcoin - Parte 1</a> | <a href="https://open.spotify.com/episode/7o22uKpIvgU7u4gtjWmmsc"target="_blank" 
+	  title="BitCast">Carteira de Bitcoin - Parte 2</a> | <a href="https://open.spotify.com/episode/3qEsPKtkgfE8EMA4vq70f2"target="_blank" 
+	  title="BitCast">Conheça o Litebringer</a>.
+                        </p>
+                    </div>
 
+                    <div>
+                        <h3 class="text-2xl font-bold text-white text-center mb-6"><i class="fas fa-graduation-cap mr-3"></i>Formação Acadêmica</h3>
+                        <p class="text-center">
+                            Minha base acadêmica é diversificada, o que me proporciona uma visão única para resolver problemas. Sou formado em <span class="font-bold text-cyan-300">Sistemas da Informação</span>, com pós-graduação em <span class="font-bold text-cyan-300">Gestão de TI</span>, MBA em <span class="font-bold text-cyan-300">Gerenciamento de Projetos</span> e uma bagagem criativa da minha primeira graduação em <span class="font-bold text-cyan-300">Publicidade & Propaganda</span>.
+                        </p>
+                    </div>
 
-  <footer>
-    <p>
-      &copy; 2020, Evandro Reis Matias.
-    </p>
-  </footer>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white text-center mb-6"><i class="fas fa-heart mr-3"></i>Vida Pessoal</h3>
+                        <p class="text-center">
+                            No meu tempo livre, o foco é minha família. Adoramos maratonar séries, ver filmes, conhecer novos lugares e, sempre que possível, me divirto jogando videogame com meus filhos.
+                        </p>
+                    </div>
 
-  <script src="./js/scripts.js"></script>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Habilidades -->
+        <section id="skills" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Minhas Habilidades</h2>
+                    <div class="w-24 h-1 animated-gradient mx-auto mt-2 rounded"></div>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 text-center">
+                    <!-- Habilidades SAP -->
+                    <div class="p-6 rounded-lg glass-effect skill-card transition-all duration-300"><i class="fas fa-cogs text-5xl text-orange-400 mb-4"></i><h3 class="font-semibold text-white">SAP</h3></div>
+                    <div class="p-6 rounded-lg glass-effect skill-card transition-all duration-300"><i class="fas fa-code text-5xl text-purple-400 mb-4"></i><h3 class="font-semibold text-white">ABAP</h3></div>
+                    <div class="p-6 rounded-lg glass-effect skill-card transition-all duration-300"><i class="fas fa-leaf text-5xl text-green-300 mb-4"></i><h3 class="font-semibold text-white">Fiori</h3></div>
+                    <!-- Gestão e Liderança -->
+                    <div class="p-6 rounded-lg glass-effect skill-card transition-all duration-300"><i class="fas fa-user-tie text-5xl text-violet-400 mb-4"></i><h3 class="font-semibold text-white">Liderança</h3></div>
+                    <div class="p-6 rounded-lg glass-effect skill-card transition-all duration-300"><i class="fas fa-tasks text-5xl text-sky-400 mb-4"></i><h3 class="font-semibold text-white">Gestão de Projetos</h3></div>
+                    <div class="p-6 rounded-lg glass-effect skill-card transition-all duration-300"><i class="fas fa-chess-board text-5xl text-gray-300 mb-4"></i><h3 class="font-semibold text-white">Planejamento Estratégico</h3></div>
+                    <div class="p-6 rounded-lg glass-effect skill-card transition-all duration-300"><i class="fas fa-users text-5xl text-green-400 mb-4"></i><h3 class="font-semibold text-white">Gestão de Pessoas</h3></div>
+                    <div class="p-6 rounded-lg glass-effect skill-card transition-all duration-300"><i class="fas fa-comments text-5xl text-blue-400 mb-4"></i><h3 class="font-semibold text-white">Comunicação Efetiva</h3></div>
+                    <div class="p-6 rounded-lg glass-effect skill-card transition-all duration-300"><i class="fas fa-hand-holding-usd text-5xl text-emerald-400 mb-4"></i><h3 class="font-semibold text-white">Gestão de Orçamento</h3></div>
+                    <div class="p-6 rounded-lg glass-effect skill-card transition-all duration-300"><i class="fas fa-sync-alt text-5xl text-rose-400 mb-4"></i><h3 class="font-semibold text-white">Metodologias Ágeis</h3></div>
+                    <!-- Habilidades SAP 2 -->
+                    <div class="p-6 rounded-lg glass-effect skill-card transition-all duration-300"><i class="fas fa-network-wired text-5xl text-blue-300 mb-4"></i><h3 class="font-semibold text-white">Gateway</h3></div>
+                    <div class="p-6 rounded-lg glass-effect skill-card transition-all duration-300"><i class="fas fa-truck-fast text-5xl text-rose-400 mb-4"></i><h3 class="font-semibold text-white">SAP SD</h3></div>
+                    <div class="p-6 rounded-lg glass-effect skill-card transition-all duration-300"><i class="fas fa-boxes-stacked text-5xl text-yellow-500 mb-4"></i><h3 class="font-semibold text-white">SAP MM</h3></div>
+                    <!-- Conceitos e Tecnologias -->
+                    <div class="p-6 rounded-lg glass-effect skill-card transition-all duration-300"><i class="fas fa-brain text-5xl text-pink-400 mb-4"></i><h3 class="font-semibold text-white">IA</h3></div>
+                    <div class="p-6 rounded-lg glass-effect skill-card transition-all duration-300"><i class="fas fa-link text-5xl text-yellow-300 mb-4"></i><h3 class="font-semibold text-white">Blockchain</h3></div>
+                    <div class="p-6 rounded-lg glass-effect skill-card transition-all duration-300"><i class="fas fa-file-signature text-5xl text-lime-400 mb-4"></i><h3 class="font-semibold text-white">Contratos Inteligentes</h3></div>
+                    <!-- Habilidades Web -->
+                    <div class="p-6 rounded-lg glass-effect skill-card transition-all duration-300"><i class="fab fa-react text-5xl text-cyan-400 mb-4"></i><h3 class="font-semibold text-white">React</h3></div>
+                    <div class="p-6 rounded-lg glass-effect skill-card transition-all duration-300"><i class="fab fa-node-js text-5xl text-green-400 mb-4"></i><h3 class="font-semibold text-white">Node.js</h3></div>
+                    <div class="p-6 rounded-lg glass-effect skill-card transition-all duration-300"><i class="fab fa-js-square text-5xl text-yellow-400 mb-4"></i><h3 class="font-semibold text-white">JavaScript</h3></div>
+                    <div class="p-6 rounded-lg glass-effect skill-card transition-all duration-300"><i class="fas fa-code text-5xl text-blue-400 mb-4"></i><h3 class="font-semibold text-white">TypeScript</h3></div>
+                    <div class="p-6 rounded-lg glass-effect skill-card transition-all duration-300"><i class="fab fa-html5 text-5xl text-orange-500 mb-4"></i><h3 class="font-semibold text-white">HTML</h3></div>
+                    <div class="p-6 rounded-lg glass-effect skill-card transition-all duration-300"><i class="fab fa-css3-alt text-5xl text-blue-500 mb-4"></i><h3 class="font-semibold text-white">CSS</h3></div>
+                    <!-- Outras Linguagens & Ferramentas -->
+                    <div class="p-6 rounded-lg glass-effect skill-card transition-all duration-300"><i class="fab fa-python text-5xl text-blue-400 mb-4"></i><h3 class="font-semibold text-white">Python</h3></div>
+                    <div class="p-6 rounded-lg glass-effect skill-card transition-all duration-300"><i class="fas fa-laptop-code text-5xl text-gray-400 mb-4"></i><h3 class="font-semibold text-white">C#</h3></div>
+                    <div class="p-6 rounded-lg glass-effect skill-card transition-all duration-300"><i class="fas fa-database text-5xl text-indigo-400 mb-4"></i><h3 class="font-semibold text-white">SQL</h3></div>
+                    <div class="p-6 rounded-lg glass-effect skill-card transition-all duration-300"><i class="fab fa-docker text-5xl text-sky-500 mb-4"></i><h3 class="font-semibold text-white">Docker</h3></div>
+                    <div class="p-6 rounded-lg glass-effect skill-card transition-all duration-300"><i class="fab fa-git-alt text-5xl text-orange-600 mb-4"></i><h3 class="font-semibold text-white">Git</h3></div>
+                    <!-- UX/UI e Design -->
+                    <div class="p-6 rounded-lg glass-effect skill-card transition-all duration-300"><i class="fas fa-smile text-5xl text-emerald-400 mb-4"></i><h3 class="font-semibold text-white">Experiência do Usuário</h3></div>
+                    <div class="p-6 rounded-lg glass-effect skill-card transition-all duration-300"><i class="fas fa-universal-access text-5xl text-indigo-400 mb-4"></i><h3 class="font-semibold text-white">Acessibilidade</h3></div>
+                    <div class="p-6 rounded-lg glass-effect skill-card transition-all duration-300"><i class="fas fa-mobile-screen-button text-5xl text-fuchsia-400 mb-4"></i><h3 class="font-semibold text-white">Responsividade</h3></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Contato -->
+        <section id="contato" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Contato</h2>
+                    <div class="w-24 h-1 animated-gradient mx-auto mt-2 rounded"></div>
+                </div>
+                <div class="max-w-lg mx-auto text-center">
+                    <a href="mailto:evandro@evandro.dev" class="inline-block bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-4 px-10 rounded-full transition-transform transform hover:scale-105 text-lg">
+                        evandro@evandro.dev
+                    </a>
+                    <div class="flex justify-center space-x-6 mt-8">
+                        <a href="https://github.com/ereismatias" target="_blank" class="text-gray-400 hover:text-cyan-400 transition-colors text-3xl"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/ereismatias/" class="text-gray-400 hover:text-cyan-400 transition-colors text-3xl"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/ereismatias" class="text-gray-400 hover:text-cyan-400 transition-colors text-3xl"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800">
+        <div class="container mx-auto px-6 py-6 text-center text-gray-500">
+            <p>&copy; 2025 Evandro.DEV - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Lógica para o menu mobile
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Fechar menu mobile ao clicar em um link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+
 </body>
-
 </html>
